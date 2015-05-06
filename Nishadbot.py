@@ -19,6 +19,11 @@ pairs = (
     "You here for 2021?",
     "Let me guess, you need help with cache lab?")),
 
+  (r'How are you\?',
+  ( "Enough formalities. Do you need help with lab or what?",
+    "I'm good.",
+    "Me? How are you? You're the one here for office hours.")),
+
   (r'I need (.*)',
   ( "Why do you need %1?",
     "We all need %1.",
