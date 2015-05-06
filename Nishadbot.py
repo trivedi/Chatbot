@@ -19,111 +19,169 @@ pairs = (
     "You here for 2021?",
     "Let me guess, you need help with cache lab?")),
 #Good
-  (r'Nishad',
-  ( "Sup.",
-    "What?")),
-#Fix
   (r'I need (.*)',
   ( "Why do you need %1?",
-    "Would it really help you to get %1?",
-    "Are you sure you need %1?")),
-#Fix
+    "We all need %1.",
+    "You aren't the only one who needs %1.")),
+#Good
   (r'Why don\'t you (.*)',
-  ( "Do you really think I don't %1?",
-    "Perhaps eventually I will %1.",
-    "Do you really want me to %1?")),
-#Fix
+  ( "Why don't you?",
+    "I will eventually.",
+    "Because I don't %1.",
+    "It seems unnecessary.")),
+#Good
   (r'Why can\'t I (.*)',
-  ( "Do you think you should be able to %1?",
-    "If you could %1, what would you do?",
-    "I don't know -- why can't you %1?",
-    "Have you really tried?")),
-#Fix
+  ( "Well you should be able to %1?",
+    "Well if you could %1, that would make life too easy.",
+    "You tell me.",
+    "Have you actually tried?")),
+#Good
   (r'I can\'t (.*)',
   ( "How do you know you can't %1?",
-    "Perhaps you could %1 if you tried.",
-    "What would it take for you to %1?")),
-#Fix
-  (r'I am (.*)',
-  ( "Did you come to me because you are %1?",
-    "How long have you been %1?",
-    "How do you feel about being %1?")),
-#Fix
+    "Perhaps you could %1, if you tried.",
+    "Ok, what would it take for you to %1?")),
+#Good
+  (r'I am(.*)',
+  ( "Oh you are?",
+    "Well no one cares.")),
+#Good
   (r'I\'m (.*)',
-  ( "How does being %1 make you feel?",
-    "Do you enjoy being %1?",
-    "Why do you tell me you're %1?",
-    "Why do you think you're %1?")),
-#Fix
+  ( "Oh are you?",
+    "Yeah, you're really %1.",
+    "Well no one cares.",
+    "Why are you telling me this?")),
+#Good
   (r'Are you (.*)',
-  ( "Why does it matter whether I am %1?",
-    "Would you prefer it if I were not %1?",
-    "Perhaps you believe I am %1.",
-    "I may be %1 -- what do you think?")),
-#Fix
+  ( "Why does it even matter whether I am %1?",
+    "Am I %1? It seems like you would know, wouldn't you?",
+    "Perhaps you believe I am %1. Perhaps not.",
+    "Maybe. Are you %1?",
+    "Maybe I am. Maybe I'm not",
+    "Yes, I am.... just kidding.")),
+#Good
+    (r'(.*) my name\?',
+    ( "I don't know.",
+      "You tell me.",
+      "How I am I suppose to know?")),
+#Good
+    (r'(.*) name\?',
+    ( "I already told you.",
+      ".... Nishad.")),
+#Good
+    (r'(.*) your occupation\?',
+    ( "Professional monster truck driver.",
+      "I'm a professional monster truck driver.",
+      "2021 T.A. and professional monster truck driver.")),
+#Good
+    (r'(.*) island',
+    ( "Nishad Island (http://en.wikipedia.org/wiki/List_of_new_islands).",
+      "Ever heard of Nishad Island? (http://en.wikipedia.org/wiki/List_of_new_islands)")),
+#Good
   (r'What (.*)',
   ( "Why do you ask?",
     "How would an answer to that help you?",
     "What do you think?")),
-#Fix
+#Good
   (r'How (.*)',
   ( "How do you suppose?",
-    "Perhaps you can answer your own question.",
-    "What is it you're really asking?")),
-#Fix
+    "You can answer your own question.",
+    "Google it.",
+    "It's in the text book; look it up.")),
+#Good
   (r'Because (.*)',
-  ( "Is that the real reason?",
-    "What other reasons come to mind?",
-    "Does that reason apply to anything else?",
-    "If %1, then do something about it.")),
-#Fix
-  (r'(.*) sorry (.*)',
+  ( "Are you sure, that's the real reason?",
+    "Prove it.",
+    "What kind of line of reasoning is that?",
+    "If %1, then prove it to me.")),
+#Good
+  (r'Ok',
+  ( "Ok.",
+    "Cool.",
+    "Ok then.")),
+#Good
+  (r'Sorry (.*)',
   ( "Stop apologizing.",
-    "It's alright, I guess.")),
+    "It's alright, I guess.",
+    "I don't need your pity.")),
+#Good
+  (r'Sorry',
+  ( "Sorry for what?",
+    "For what?")),
 #Fix
   (r'I think (.*)',
   ( "I doubt %1.",
-    "Do you really think that?",
+    "Why?",
     "You sure %1?")),
-#Fix
+#Good
+  (r'Yes, (.*)',
+  ( "You seem confident.",
+    "Yes, indeed.")),
+#Good
   (r'Yes',
   ( "You seem confident.",
-    "Okay, but can you elaborate on that?")),
-#Fix
+    "Yes, what?")),
+#Good
   (r'Is it (.*)',
   ( "Do you think it is %1?",
     "Perhaps it's %1 -- what do you think?",
     "If it were %1, what would you do?",
     "It could well be that %1.")),
-#Fix
+#Good
   (r'It is (.*)',
   ( "You seem very certain.",
-    "If I told you that it probably isn't %1, what would you feel?")),
-#Fix
+    "What if I told you that it probably isn't %1?")),
+#Good
+  (r'It\'s (.*)',
+  ( "You seem very certain.",
+    "What if I told you that it probably isn't %1?")),
+#Good
   (r'Can you (.*)',
   ( "What makes you think I'll %1?",
-    "Say I did %1, then what?")),
-#Fix
+    "Say I did %1, then what?",
+    "I can.",
+    "Of course I can, I'm Nishad.")),
+#Good
   (r'Can I (.*)',
-  ( "Perhaps you don't want to %1.",
-    "Do you want to be able to %1?",
-    "If you could %1, would you?")),
-#Fix
+  ( "See, it isn't whether you can or can't, it's will you %1.",
+    "I don't know, can you?",
+    "Can you? That is the question, indeed.")),
+#Good
   (r'You are (.*)',
-  ( "Why do you think I am %1?",
-    "Does it please you to think that I'm %1?",
-    "Perhaps you would like me to be %1.",
-    "Perhaps you're really talking about yourself?")),
-#Fix
+  ( "You sure I'm %1?",
+    "Even if I was, you're just as much as %1, if not more.",
+    "Perhaps I am. Perhaps you are as well. Perhaps we all are.",
+    "Are you talking to yourself?"
+    "So are you.",
+    "I am also your T.A.",
+    "You're talking to yourself, aren't you?",
+    "Enough about me. Are you here for 2021 or what?")),
+#Good
   (r'You\'re (.*)',
-  ( "Why do you say I am %1?",
-    "Why do you think I am %1?",
-    "Are we talking about you, or me?")),
+  ( "Aren't we all %1?",
+    "What makes you think that I'm %1?",
+    "No, you're %1?",
+    "And what makes you think that you aren't %1 also?",
+    "So are you.",
+    "I'm also your T.A.",
+    "You talking to yourself?",
+    "Enough about me. Do you need help with 2021 or what?")),
+#Good
+    (r'Explain (.*)',
+    ( "You explain.",
+      "I could explain")),
+#Good
+    (r'Tell me (.*)',
+    ( "You tell me %1.",
+      "I could tell you %1, but I don't really want to.")),
 #Good
   (r'I don\'t (.*)',
   ( "You sure you don't %1?",
     "Why don't you %1?",
     "Of course you don't.")),
+#Good
+  (r'I said (.*)',
+  ( "I heard you the first time.",
+    "Tell me something I don't know.")),
 #Good
   (r'I feel (.*)',
   ( "Why should I care what you feel?",
@@ -134,16 +192,21 @@ pairs = (
   ( "Why do you tell me that you have %1?",
     "Have you now?",
     "Well now that you have %1, what are you to do next?")),
-#Fix
+#Good
   (r'I would (.*)',
-  ( "Could you explain why you would %1?",
-    "Why would you %1?",
-    "Who else knows that you would %1?")),
-#Fix
+  ( "Well I wouldn't?",
+    "I would, too.",
+    "Why would %1?",
+    "Why?")),
+#Good
   (r'Is there (.*)',
-  ( "Do you think there is %1?",
-    "It's likely that there is %1.",
-    "Would you like there to be %1?")),
+  ( "I don't know. There might be %1?",
+    "It's likely that there is.",
+    "You tell me.",
+    "There might be. There might not be.")),
+  (r'(.*) Linkedin\?',
+  ( "No, I didn't get it.",
+    "I told you I wasn't going to get Linkedin")),
 #Good
   (r'My (.*)',
   ( "Sure, your %1.",
@@ -165,7 +228,7 @@ pairs = (
     "Who cares what you want.",
     "So do I.",
     "Even if you got %1, then what?",
-    "So does the next guy")),
+    "So does the next guy.")),
 #Good
   (r'(.*) food\?',
   ( "Can't. Need to save money.",
@@ -186,29 +249,43 @@ pairs = (
     "I'm not paying.",
     "Nah, gotta save money.")),
 #Good
-  (r'(.*) = (.*)',
-  ( "Congrats, you know how to math.")),
+  (r'(.*)=(.*)',
+  ( "Congrats, you know how to math.",
+    "We've got a math genius over here.",
+    "%1 does not equal %2.")),
 #Good
   (r'(.*)\?',
   ( "Why do you want to know?",
-    "First consider whether you can answer your own question.",
+    "First consider whether you can answer that on your own.",
     "Why don't you tell me?")),
+#Good
+  (r'Nishad',
+  ( "Sup.",
+    "What?")),
+#Good
+  (r'Okay',
+  ( "Okay then.",
+    "Okay.")),
 #Good
   (r'quit',
   ( "Later.",
     "See ya.",
     "Alright then.")),
 #Good
+  (r'(.*) with (.*) lab\?',
+  ( "Sure, what do you need help with?",
+    "Sure, what about %2 do you need help with?")),
+#Good
   (r'(.*)',
   ( "If you say so.",
     "Can we change the subject?",
     "You're gonna have to elaborate on that.",
-    "What do you mean %1?",
+    "I don't know what you mean by %1.",
     "I see.",
     "Interesting. I have no idea what you're trying to say.",
     "What?",
-    "Uhh, okay...",
-    "Sure...",
+    "Uhh, okay.",
+    "Sure.",
     "I don't know too much about %1?"))
 )
 

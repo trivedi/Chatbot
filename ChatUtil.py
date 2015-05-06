@@ -103,6 +103,8 @@ class Chat(object):
         :param str: The string to be mapped
         :rtype: str
         """
+        
+        # check for repititious user inputs
         if str.lower() == self._repeated_input.lower():
             self._repition_count += 1
             if self._repition_count >= 2 and '?' not in str:
