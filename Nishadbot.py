@@ -20,7 +20,8 @@ pairs = (
     "Let me guess, you need help with cache lab?")),
 
   (r'How are you\?',
-  ( "Enough formalities. Do you need help with lab or what?",
+  ( "Who cares?",
+    "Enough formalities. Do you need help with lab or what?",
     "I'm good.",
     "Me? How are you? You're the one here for office hours.")),
 
@@ -36,10 +37,15 @@ pairs = (
     "It seems unnecessary.")),
 
   (r'Why can\'t I (.*)',
-  ( "Well you should be able to %1?",
-    "Well if you could %1, that would make life too easy.",
+  ( "Because you're dumb.",
+    "I anticipated your failure.",
     "You tell me.",
     "Have you actually tried?")),
+
+  (r'I think (.*))',
+    ("Well, of course you do.",
+      "You're disillusioned".
+      "I don't believe that for a second")),
 
   (r'I can\'t (.*)',
   ( "How do you know you can't %1?",
@@ -47,7 +53,9 @@ pairs = (
     "Ok, what would it take for you to %1?")),
 
   (r'I am(.*)',
-  ( "Oh you are?",
+  ( "Wow, really?! You're so interesting.",
+    "No one cares",
+    "Oh you are?",
     "Well no one cares.")),
 
   (r'I\'m (.*)',
@@ -65,9 +73,14 @@ pairs = (
     "Yes, I am.... just kidding.")),
 
     (r'(.*) my name\?',
-    ( "I don't know.",
+    ( "Why would I care?",
+      "I don't know.",
       "You tell me.",
       "How I am I suppose to know?")),
+
+    (r'(.*) you smart\?',
+      ("Of course.",
+        "I can't believe you're even asking me that.")),
 
     (r'(.*) name\?',
     ( "I already told you.",
@@ -83,43 +96,55 @@ pairs = (
       "Ever heard of Nishad Island? (http://en.wikipedia.org/wiki/List_of_new_islands)")),
 
   (r'What (.*)',
-  ( "Why do you ask?",
+  ( "You idiot",
+    "Why do you ask?",
     "How would an answer to that help you?",
     "What do you think?")),
 
   (r'How (.*)',
-  ( "How do you suppose?",
+  ( "You should know that already.",
+    "It's easy. Figure it out.",
+    "How do you suppose?",
     "You can answer your own question.",
     "Google it.",
     "It's in the text book; look it up.")),
 
   (r'Because (.*)',
   ( "Are you sure, that's the real reason?",
+    "Clearly you've put a lot of thought into this.",
     "Prove it.",
     "What kind of line of reasoning is that?",
     "If %1, then prove it to me.")),
 
   (r'Ok',
   ( "Ok.",
+    "Stop talking to me",
     "Cool.",
-    "Ok then.")),
+    "Fantastic.")),
 
   (r'Sorry (.*)',
-  ( "Stop apologizing.",
-    "It's alright, I guess.",
+  ( 
+    '*Mocking tone* Sorry, %l.',
     "I don't need your pity.")),
 
   (r'Sorry',
-  ( "Sorry for what?",
+  ( "You should be",
+    "Sorry for what?",
     "For what?")),
 #Fix
   (r'I think (.*)',
-  ( "I doubt %1.",
+  ( "Well you're wrong...as usual.",
+    "Wrong again.",
+    "No one cares what you think",
+    "Who cares what you think?",
+    "I doubt %1.",
     "Why?",
     "You sure %1?")),
 
   (r'Yes, (.*)',
   ( "You seem confident.",
+    "Oh yeah. I definetly believe you.",
+    "Seems like you've put a lot of thought into this.",
     "Yes, indeed.")),
 
   (r'Yes',
@@ -141,7 +166,9 @@ pairs = (
     "What if I told you that it probably isn't %1?")),
 
   (r'Can you (.*)',
-  ( "What makes you think I'll %1?",
+  ( "No.",
+    "No, next question",
+    "What makes you think I'll %1?",
     "Say I did %1, then what?",
     "I can.",
     "Of course I can, I'm Nishad.")),
@@ -152,7 +179,8 @@ pairs = (
     "Can you? That is the question, indeed.")),
 
   (r'You are (.*)',
-  ( "You sure I'm %1?",
+  ( "Don't tell me what I am.",
+    "You sure I'm %1?",
     "Even if I was, you're just as much as %1, if not more.",
     "Perhaps I am. Perhaps you are as well. Perhaps we all are.",
     "Are you talking to yourself?"
@@ -172,11 +200,13 @@ pairs = (
     "Enough about me. Do you need help with 2021 or what?")),
 
     (r'Explain (.*)',
-    ( "You explain.",
+    ( "Why should waste my breath on you?",
+      "You explain.",
       "I could explain")),
 
     (r'Tell me (.*)',
-    ( "You tell me %1.",
+    ( "Why would I waste my breath on you?",
+      "You tell me %1.",
       "I could tell you %1, but I don't really want to.")),
 
   (r'I don\'t (.*)',
@@ -209,8 +239,10 @@ pairs = (
     "It's likely that there is.",
     "You tell me.",
     "There might be. There might not be.")),
+  
   (r'(.*) Linkedin\?',
-  ( "No, I didn't get it.",
+  ( "I'm too good for them",
+    "No, I didn't get it.",
     "I told you I wasn't going to get Linkedin")),
 
   (r'My (.*)',
@@ -236,12 +268,16 @@ pairs = (
     "So does the next guy.")),
 
   (r'(.*) food\?',
-  ( "Can't. Need to save money.",
+  ( "Food is dumb",
+    "Food is a waste of money",
+    "I'm the only one who can survive without food.",
+    "Can't. Need to save money.",
     "I'll grab food at Centen. Need to save money.",
     "No, I need to save some money.")),
 
   (r'(.*) eat(.*)',
-  ( "Can't. Need to save money.",
+  ( "Eating is a waste of time.",
+    "Can't. Need to save money.",
     "I'll just eat at Centen. Need to save money.",
     "No, I need to save some money.")),
 
@@ -282,7 +318,9 @@ pairs = (
     "Sure, what about %2 do you need help with?")),
 
   (r'(.*)',
-  ( "If you say so.",
+  ( "Shut up",
+    "You're a piece of garbage",
+    "If you say so.",
     "Can we change the subject?",
     "You're gonna have to elaborate on that.",
     "I don't know what you mean by %1.",
